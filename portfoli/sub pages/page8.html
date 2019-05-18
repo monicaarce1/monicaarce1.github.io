@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <title>Monica-Jean Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,67 +8,86 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-	  .left-panel {
-		  width: 256px;
-	  }
-	  .gifimage {
-		  width: 256px;
-/*		  height: 200px;*/
-	  }
-  </style>
-</head>
-<body>
-
+* {
+    box-sizing: border-box;
+}
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 5px;
+    height: 100%; /* Should be removed. Only for demonstration */
+}
+.left {
+    width: 20%;
+    height: 100%;
+}
+.right {
+    width: 80%;
+    height: 100%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 100%;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+.left-panel {
+    padding-left: 5%;
+    width: 256px;
+    height: 100%;
+}
+.gifimage {
+    width: 256px;/*		  height: 200px;*/
+}
+.r-panel {
+    padding-right: 5%;
+    width: 256px;
+ height: 100%:
+}
+</style>
+  </head>
+  <body>
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+    <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
-    </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="#">Portfolio</a> </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav">
         <li class="active"><a href="../index.html">Home</a></li>
-        
-     	<li><a href="page1.html">Meme Mashup</a></li>
-		<li><a href="page2.html">Minecraft Sculpture</a></li>
-		<li><a href="page3.html">Glitch Project</a></li>
-		<li><a href="page4.html">Net Art</a></li>
-		<li><a href="page5.html">3D sculpture</a></li>
-		<li><a href="page6.html">Self Portrait</a></li>
-		<li><a href="page7.html">DIY Photoshop</a></li>
-		<li><a href="page8.html">Glitching Gifs</a></li>
-        
+        <li><a href="page1.html">Meme Mashup</a></li>
+        <li><a href="page2.html">Minecraft Sculpture</a></li>
+        <li><a href="page3.html">Glitch Project</a></li>
+        <li><a href="page4.html">Net Art</a></li>
+        <li><a href="page5.html">3D sculpture</a></li>
+        <li><a href="page6.html">Self Portrait</a></li>
+        <li><a href="page7.html">DIY Photoshop</a></li>
+        <li><a href="page8.html">Glitching Gifs</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
+        <ul class="nav navbar-nav navbar-right">
       </ul>
-    </div>
+      </div>
   </div>
-</nav>
-
+  </nav>
 <div class="jumbotron">
-  <div class="container text-center">
-    <h1>Glitching Gifs</h1>      
+    <div class="container text-center">
+    <h1>Glitching Gifs</h1>
     <p></p>
   </div>
-</div>
-  
-<!--	<div class="container-fluid bg-3 text-center"></div>   -->
+  </div>
+
+<!--	<div class="container-fluid bg-3 text-center"></div>   --> 
 <!--
   <h3></h3><br>
   <div class="row">
@@ -87,18 +106,25 @@
 </p>
 </div>
 -->
-<div class="content">
-	<div class="left-panel">
-	<img class="gifimage" src="../../gifs/door_loop2.gif" alt="door loop"/>
-	<img class="gifimage" src="../../gifs/car.gif" alt="car"/>
-	<img class="gifimage" src="../../gifs/dogge.gif" alt="dogge"/>
-	<img class="gifimage" src="../../gifs/hype_loop.gif" alt="hype loop" />
-	</div>
-	</div>
-	<div class="right-panel">
-	</div>
-</body>
-<footer class="container-fluid text-center">
-</footer>
-</html>
 
+<div class="row">
+	<div class="column left">
+		<div class="left-panel">
+			<img class="gifimage" src="../../gifs/door_loop2.gif" alt="door loop"/>
+			<img class="gifimage" src="../../gifs/car.gif" alt="car"/>
+			<img class="gifimage" src="../../gifs/dogge.gif" alt="dogge"/>
+			<img class="gifimage" src="../../gifs/hype_loop.gif" alt="hype loop"/>
+		</div>
+	</div>
+    <div class="column right">
+    <div class="textcontent" style="text-align:justify; font-size: large">
+        <p> As an artist, I wanted to show my abilities to see how much I learned and grown as an artist in digital media. Learning digital arts made me understand that technology and art can create something amazing. It has shown me that it’s possible to do something and learn more about it. As an artist, creativity has become a passion for many and a lesson for others. </p>
+        <p> For my project, “Glitching Gifs”, I wanted to show an illusion of perfect gifs and turn them into an unperfect loop. I wanted to capture that moment where a gif becomes broken. This represents how the perfect can’t be perfect there is always a flaw to that reality. My work has given me this idea of how far I can go with this project. I found that using broken glitches has its limit when glitching them. The idea of this project gives the feel of how aesthetics the gif can be. It gives the viewers an understanding that the progress of this project and how much more can it go. When we see looping gifs it is viewed as satisfied, but seeing them unsatisfied becomes a whole new level of feeling. </p>
+        <p> For this project, I want to show them that it’s possible to glitch gifs using a simple program editor. Using gifs for this project has made me realize that I can hate it or love it. Showing the viewers that gifs can be broken to the point of no recovery has some aesthetically pleasing or not. Using gifs from the internet and breaking the code has been a struggle of mine because the idea of breaking gifs is like the idea of breaking photos. It’s a learning lesson for myself throughout the project because the idea of glitching gifs was fun, but towards the end of this project, it’s been complicated process.</p>
+        <p>Through this project, I used a program called HxD, which is a Hex Editor for Windows. During this process, it was a struggle because I didn’t know how to use this program. When I first started using this program I used some photos to see how this program works. The photos I  started using were just normal dog photos I had in my file and I used a website that has instructions of using HxD. When I started breaking the codes I had to open the photo through windows paint to see how it turned out. The first photo that I used I had a hard time because I didn’t know if I was breaking it instead I used a different photo and started breaking the code. After saving a copy of it and opening it in paint I saw the results of the photo. The photo that I used was glitched. Afterward, I started practicing on other photos. I started to realize that using photos wasn’t what I wanted to do for this project. Instead of using photos I started using gifs. I didn’t think that breaking gifs through the program was possible to do. I used the same tutorial that I used to help me glitch photos with the program. I started to use meme gifs to test out how it would look like. I started breaking the code and saved copies of it because I didn’t know what would happen to it. Instead of opening it in the paint. I have to open it in internet explorer and saving it through there. At the time I didn’t see any results of changes to the gif so I used perfectly looped gifs to test out if the theory actually works. After seeing the results with different gifs I started glitching so many gifs that it was fun making them. This project has been a struggle in the end because of how most of the gifs I wanted to present didn’t work because they were broken to the point where they were not able to open in photoshop or on my portfolio. I was going to use photoshop timeline to create a timeline of these gifs, but it not able to open it was a love and hate with this project. I used a website to recover at least four gifs that are able to work in my portfolio. At the end of this project, I learned a lesson of how much I can break a gif to no point of using it. It’s been a struggle of how these glitch gifs turn out at the end of the project.</p>
+      </div>
+  </div>
+  </div>
+</body>
+  <footer class="container-fluid text-center"></footer>
+</html>
